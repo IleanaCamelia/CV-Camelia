@@ -111,3 +111,28 @@ img.rounded-circle{
   filter: grayscale(30%) saturate(70%) contrast(95%) brightness(95%);
 }
 
+/* Desktop spacing between columns */
+@media (min-width: 992px) {
+  .row {
+    gap: 3rem; /* spațiu între stânga și dreapta */
+  }
+}
+
+/* Mobile layout: stack columns */
+@media (max-width: 991px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .col-md-4 {
+    position: relative; /* elimină sticky pe mobil */
+    top: auto;
+  }
+}
+

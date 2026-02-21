@@ -6,7 +6,7 @@ body {
 }
 
 .container{
-  max-width: 1400px; /
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
@@ -169,6 +169,15 @@ img.rounded-circle{
     padding-left: 1.1rem;
   }
 }
+@media (max-width: 991px){
+  .col-md-8 { order: 1; }
+  .col-md-4 { order: 2; }
+}
+
+@media (max-width: 991px){
+  .col-md-8{ margin-top: 0.5rem; }
+}
+
 
 
 

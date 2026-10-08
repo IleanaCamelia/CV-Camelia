@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ileana Camelia Cilioaica – Real Estate Agent</title>
-  <meta name="description" content="Ileana Camelia Cilioaica – Real Estate Agent in Tenerife, Spain. Over 20 years of international experience working directly with people. CV and contact details." />
+  <title>Ileana Camelia Cilioaica</title>
+  <meta name="description" content="Ileana Camelia Cilioaica" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,111 +21,169 @@
       <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></symbol>
       <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4.5h11l-2 3.5 2 3.5H5"/></symbol>
       <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14"/></symbol>
     </defs>
   </svg>
 
   <main class="cv">
 
-    <header class="cv-header">
-      <img src="cami.png" alt="Ileana Camelia Cilioaica" class="photo">
-      <div class="identity">
-        <h1>Ileana Camelia Cilioaica</h1>
-        <p class="tagline">Client-focused · Trust-building · Autonomous · Detail-oriented</p>
+    <!-- ===== Banner ===== -->
+    <header class="banner">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
       </div>
+
+      <img src="cami.png" alt="Ileana Camelia Cilioaica" class="photo">
+      <h1>Ileana Camelia Cilioaica</h1>
+      <p class="tagline" data-i18n="tagline">Client-focused · Trust-building · Autonomous · Detail-oriented</p>
+
+      <ul class="stats">
+        <li><strong>20+</strong><span data-i18n="stat1">years experience</span></li>
+        <li><strong>4+</strong><span data-i18n="stat2">countries</span></li>
+        <li><strong>3</strong><span data-i18n="stat3">languages</span></li>
+      </ul>
+
+      <a class="btn-pdf" id="pdf-link" href="cv.pdf" download="Ileana-Camelia-Cilioaica-CV.pdf">
+        <svg class="icon"><use href="#i-download"/></svg><span data-i18n="download">Download PDF</span>
+      </a>
     </header>
 
     <div class="cv-body">
 
-      <aside class="sidebar">
-        <section>
-          <h2>Contact</h2>
-          <ul class="contact-list">
-            <li><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:cilioaica.camelia@gmail.com">cilioaica.camelia@gmail.com</a></li>
-            <li><svg class="icon"><use href="#i-phone"/></svg><span>+34 611 258 510<span class="phone-actions"><a href="tel:+34611258510">Call</a><span class="sep">·</span><a href="https://wa.me/34611258510" target="_blank" rel="noopener">WhatsApp</a></span></span></li>
-            <li><svg class="icon"><use href="#i-pin"/></svg>Tenerife, Spain</li>
-            <li><svg class="icon"><use href="#i-flag"/></svg>Romanian</li>
-            <li><svg class="icon"><use href="#i-globe"/></svg><a href="https://cilioaica-realty.es" target="_blank" rel="noopener">cilioaica-realty.es</a></li>
+      <!-- 1. Video intro (hidden until INTRO_VIDEO_URL is set in script.js) -->
+      <section id="intro-video" class="video-section" hidden>
+        <h2 data-i18n="t_video">Watch my intro</h2>
+        <div class="video-frame" id="video-frame"></div>
+      </section>
+
+      <!-- 2. Profile -->
+      <section>
+        <h2 data-i18n="t_profile">Profile</h2>
+        <p data-i18n="p1">Passionate about aesthetics, art and experiences that create authentic connections, I have over 20 years of international experience working directly with people in Spain, Austria and other countries.</p>
+        <p data-i18n="p2">One of my key strengths is the ability to quickly understand a client's needs and preferences and identify the solution that truly fits them. I believe in relationships built on trust, attention and professionalism, not pressure — and the fact that people come back is, for me, the best confirmation.</p>
+        <p data-i18n="p3">I have experience in direct sales of cosmetic products, including personalized demonstrations, and I currently run my own real estate business, managing the entire process, from attracting and building relationships with clients to negotiating and closing the sale.</p>
+        <p data-i18n="p4">I am autonomous, organized, curious and solution-oriented. I enjoy learning new things and turning ideas into concrete projects — I am currently developing AI-based solutions and automations for restaurants.</p>
+        <p data-i18n="p5">I am drawn to new experiences and open to opportunities where I can keep growing, learning and adding value through my experience, my energy and my ability to work directly with people.</p>
+      </section>
+
+      <!-- 3. What I bring -->
+      <section>
+        <h2 data-i18n="t_bring">What I bring to Germaine de Capuccini</h2>
+        <p data-i18n="bring">I know southern Tenerife and its people well: beauty salons, aesthetic centres, hotels and the international clientele that comes here. I speak Spanish, English and Romanian, so I can communicate naturally with owners and beauticians from any background. I know what it means to present a product directly, with live demonstrations, and to build long-term relationships. I organize my own area and schedule with the discipline of someone who runs her own business.</p>
+      </section>
+
+      <!-- 4. Philosophy -->
+      <section>
+        <h2 data-i18n="t_philosophy">My philosophy</h2>
+        <blockquote class="philosophy" data-i18n="philosophy">I don't believe in 'selling'. I believe in listening, understanding what the person in front of me is really looking for, and offering the product that truly suits them. When the product is good and the relationship is honest, the sale comes naturally, and the client comes back.</blockquote>
+      </section>
+
+      <!-- 5. Experience -->
+      <section>
+        <h2 data-i18n="t_experience">Experience</h2>
+
+        <article class="job">
+          <h3 data-i18n="j1_title">Independent Real Estate Agent – Cilioaica Realty</h3>
+          <p class="job-meta" data-i18n="j1_meta">Tenerife · May 2026 – Present</p>
+          <ul>
+            <li data-i18n="j1_b1">Representing buyers and sellers across the island</li>
+            <li data-i18n="j1_b2">Client acquisition, property presentations, negotiation and closing</li>
+            <li data-i18n="j1_b3">International clients, communication in 3 languages</li>
           </ul>
-        </section>
+        </article>
 
-        <section>
-          <h2>Languages</h2>
-          <ul class="plain-list">
-            <li>Romanian</li>
-            <li>English</li>
-            <li>Spanish</li>
+        <article class="job">
+          <h3 data-i18n="j2_title">AI Automations for Restaurants</h3>
+          <p class="job-meta" data-i18n="j2_meta">Present</p>
+          <ul>
+            <li data-i18n="j2_b1">Building automated systems to grow reviews and online visibility</li>
           </ul>
-        </section>
+        </article>
 
-        <section>
-          <h2>Education</h2>
-          <ul class="edu-list">
-            <li><strong>Decebal High School</strong><span>Mathematics &amp; Informatics</span></li>
-            <li><strong>Sales Master Program</strong><span>Sales &amp; Marketing</span></li>
-            <li><strong>IT Programming &amp; Web Development</strong></li>
+        <article class="job">
+          <h3 data-i18n="j3_title">Beauty Sales Advisor – Premier</h3>
+          <p class="job-meta" data-i18n="j3_meta">C.C. Oasis &amp; C.C. Duque, Tenerife · Sep – Dec 2023</p>
+          <ul>
+            <li data-i18n="j3_b1">Attracting customers directly in the shopping centre by offering product samples</li>
+            <li data-i18n="j3_b2">Live product demonstrations</li>
+            <li data-i18n="j3_b3">Personalized recommendations based on skin type</li>
+            <li data-i18n="j3_b4">Direct sales and on-the-spot closing</li>
           </ul>
-        </section>
-      </aside>
+        </article>
 
-      <div class="content">
-        <section>
-          <h2>Profile</h2>
-          <p>Passionate about aesthetics, art and experiences that create authentic connections, I have over 20 years of international experience working directly with people in Spain, Austria and other countries.</p>
-          <p>One of my key strengths is the ability to quickly understand a client's needs and preferences and identify the solution that truly fits them. I believe in relationships built on trust, attention and professionalism, not pressure — and the fact that people come back is, for me, the best confirmation.</p>
-          <p>I have experience in direct sales of cosmetic products, including personalized demonstrations, and I currently run my own real estate business, managing the entire process, from attracting and building relationships with clients to negotiating and closing the sale.</p>
-          <p>I am autonomous, organized, curious and solution-oriented. I enjoy learning new things and turning ideas into concrete projects — I am currently developing AI-based solutions and automations for restaurants.</p>
-          <p>I am drawn to new experiences and open to opportunities where I can keep growing, learning and adding value through my experience, my energy and my ability to work directly with people.</p>
-        </section>
+        <article class="job">
+          <h3 data-i18n="j4_title">Hospitality &amp; Customer Service</h3>
+          <p class="job-meta" data-i18n="j4_meta">Austria, Spain (Mallorca), Cyprus, Romania, Carnival Cruise Line</p>
+          <p data-i18n="j4_text">Bartender, Head Waitress / Shift Supervisor, VIP Waitress, Assistant Manager. Team coordination, high service standards under pressure, long-term client relationships.</p>
+        </article>
+      </section>
 
-        <section>
-          <h2>Experience</h2>
+      <!-- 6. Recommendations -->
+      <section>
+        <h2 data-i18n="t_recs">Recommendations</h2>
+        <div class="recs">
+          <figure class="rec">
+            <div class="avatar" aria-hidden="true">AM</div>
+            <blockquote data-i18n="r1_quote">“Camelia has a rare ability to understand what clients really want, even before they say it. Working with her is easy: she's organized, honest and always one step ahead.”</blockquote>
+            <figcaption><strong>Ana Maria Moldovan</strong><span data-i18n="r1_role">Real Estate Colleague</span></figcaption>
+          </figure>
+          <figure class="rec">
+            <div class="avatar" aria-hidden="true">LC</div>
+            <blockquote data-i18n="r2_quote">“Reliable, warm and incredibly professional. Camelia builds trust naturally, and people feel comfortable with her from the first conversation.”</blockquote>
+            <figcaption><strong>Loredana Cudur</strong><span data-i18n="r2_role">Collaborator</span></figcaption>
+          </figure>
+          <figure class="rec">
+            <div class="avatar" aria-hidden="true">JM</div>
+            <blockquote data-i18n="r3_quote">“Camelia is autonomous, hardworking and great with people. She handles pressure calmly and always leaves clients with a positive impression.”</blockquote>
+            <figcaption><strong>Jender Morales</strong><span data-i18n="r3_role">Former Manager, Real Estate</span></figcaption>
+          </figure>
+        </div>
+        <p class="refs-note" data-i18n="refs">References available on request</p>
+      </section>
 
-          <article class="job">
-            <div class="job-head">
-              <h3>Independent Real Estate Agent – Cilioaica Realty</h3>
-              <p class="job-meta">Tenerife · May 2026 – Present</p>
-            </div>
-            <ul>
-              <li>Representing buyers and sellers across the island</li>
-              <li>Client acquisition, property presentations, negotiation and closing</li>
-              <li>International clients, communication in 3 languages</li>
-            </ul>
-          </article>
+      <!-- 7. Education -->
+      <section class="center">
+        <h2 data-i18n="t_education">Education</h2>
+        <ul class="edu-list">
+          <li><strong data-i18n="e1">Decebal High School</strong><span data-i18n="e1_d">Mathematics &amp; Informatics</span></li>
+          <li><strong>Sales Master Program</strong><span data-i18n="e2_d">Sales &amp; Marketing</span></li>
+          <li><strong data-i18n="e3">IT Programming &amp; Web Development</strong></li>
+        </ul>
+      </section>
 
-          <article class="job">
-            <div class="job-head">
-              <h3>AI Automations for Restaurants</h3>
-              <p class="job-meta">Present</p>
-            </div>
-            <ul>
-              <li>Building automated systems to grow reviews and online visibility</li>
-            </ul>
-          </article>
+      <!-- 8. Languages -->
+      <section class="center">
+        <h2 data-i18n="t_languages">Languages</h2>
+        <ul class="lang-list">
+          <li data-i18n="l1">Romanian</li>
+          <li data-i18n="l2">English</li>
+          <li data-i18n="l3">Spanish</li>
+        </ul>
+      </section>
 
-          <article class="job">
-            <div class="job-head">
-              <h3>Beauty Sales Advisor – Premier</h3>
-              <p class="job-meta">C.C. Oasis &amp; C.C. Duque, Tenerife · Sep – Dec 2023</p>
-            </div>
-            <ul>
-              <li>Attracting customers directly in the shopping centre by offering product samples</li>
-              <li>Live product demonstrations</li>
-              <li>Personalized recommendations based on skin type</li>
-              <li>Direct sales and on-the-spot closing</li>
-            </ul>
-          </article>
+      <!-- 9. Contact -->
+      <section class="center">
+        <h2 data-i18n="t_contact">Contact</h2>
+        <ul class="contact-row">
+          <li><svg class="icon"><use href="#i-mail"/></svg><a href="mailto:cilioaica.camelia@gmail.com">cilioaica.camelia@gmail.com</a></li>
+          <li><svg class="icon"><use href="#i-phone"/></svg><span>+34 611 258 510</span><span class="phone-actions"><a href="tel:+34611258510" data-i18n="call">Call</a><span class="sep" aria-hidden="true">·</span><a href="https://wa.me/34611258510" target="_blank" rel="noopener">WhatsApp</a></span></li>
+          <li><svg class="icon"><use href="#i-globe"/></svg><a href="https://cilioaica-realty.es" target="_blank" rel="noopener">cilioaica-realty.es</a></li>
+          <li><svg class="icon"><use href="#i-flag"/></svg><span data-i18n="nationality">Nationality: Romanian</span></li>
+          <li><svg class="icon"><use href="#i-pin"/></svg><span data-i18n="location">Tenerife, Spain</span></li>
+        </ul>
+      </section>
 
-          <article class="job">
-            <div class="job-head">
-              <h3>Hospitality &amp; Customer Service</h3>
-              <p class="job-meta">Austria, Spain (Mallorca), Cyprus, Romania, Carnival Cruise Line</p>
-            </div>
-            <p>Bartender, Head Waitress / Shift Supervisor, VIP Waitress, Assistant Manager. Team coordination, high service standards under pressure, long-term client relationships.</p>
-          </article>
-        </section>
+      <!-- QR code (print / PDF only) -->
+      <div class="print-qr">
+        <img src="qr.svg" alt="QR code to the online CV">
+        <span>ileanacamelia.github.io/CV-Camelia</span>
       </div>
 
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
